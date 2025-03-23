@@ -1534,8 +1534,24 @@ dependencies = [
  "embedded-io-async",
  "enumset",
  "heapless",
- "log",
  "no-std-net",
+ "num_enum",
+ "serde",
+ "strum 0.25.0",
+]
+
+[[package]]
+name = "embedded-svc"
+version = "0.28.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a7770e30ab55cfbf954c00019522490d6ce26a3334bede05a732ba61010e98e0"
+dependencies = [
+ "defmt",
+ "embedded-io",
+ "embedded-io-async",
+ "enumset",
+ "heapless",
+ "log",
  "num_enum",
  "serde",
  "strum 0.25.0",
@@ -1676,7 +1692,7 @@ checksum = "2180642ca122a7fec1ec417a9b1a77aa66aaa067fdf1daae683dd8caba84f26b"
 dependencies = [
  "embassy-futures",
  "embedded-hal-async",
- "embedded-svc",
+ "embedded-svc 0.27.1",
  "embuild",
  "enumset",
  "esp-idf-hal",
@@ -2820,9 +2836,6 @@ name = "no-std-net"
 version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1bcece43b12349917e096cddfa66107277f123e6c96a5aea78711dc601a47152"
-dependencies = [
- "serde",
-]
 
 [[package]]
 name = "nom"
@@ -3733,7 +3746,7 @@ dependencies = [
  "actix-web",
  "anyhow",
  "curl",
- "embedded-svc",
+ "embedded-svc 0.28.1",
  "esp-idf-svc",
  "http-client",
  "httpdate",
